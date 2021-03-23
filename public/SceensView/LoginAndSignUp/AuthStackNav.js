@@ -6,20 +6,20 @@ import LoginScreen from './LoginScreen';
 import SignUp from './SignUpScreen'
 import { Modal } from 'react-native';
 import Header from '../../Components/Header';
-
 const AuthStack = createStackNavigator();
-const login = () => {
+const login = ({navigation}) => {
     return (
         <AuthStack.Navigator
             screenOptions={{
-                headerTitle: () => <Header/>,
+                headerTitle: () => <Header text='Login' onPress={()=> navigation.pop()}/>,
                 headerStyle: {
                     backgroundColor: '#FE4E4E',
                 },
                 headerLeft: null
             }}
         >
-            <AuthStack.Screen name='Login' component={LoginScreen} />
+            <AuthStack.Screen name='Login' component={LoginScreen} 
+            />
         </AuthStack.Navigator>
     )
 }
@@ -39,7 +39,6 @@ export function AuthStackNav(){
                 headerStyle: {
                     backgroundColor: 'red'
                 }
-               
             }}
              mode={'modal'}   
             >
