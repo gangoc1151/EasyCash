@@ -20,6 +20,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import {AuthStackNav} from './public/SceensView/LoginAndSignUp/AuthStackNav';
+import HomeScreenNav from './public/SceensView/HomeScreens/HomeScreenNav'
 import HomeSceen from './public/SceensView/LoginAndSignUp/HomeSceen';
 import LoginScreen from './public/SceensView/LoginAndSignUp/LoginScreen'
 const Stack = createStackNavigator();
@@ -36,7 +37,7 @@ const App = () => {
     hideSplash && SplashScreen.hide();
   }, [hideSplash]);
 
-  const isLogin =false;
+  const isLogin =true;
   const Home = () => {
     return (
       <BottomTab.Navigator>
@@ -57,7 +58,7 @@ return (
       }}
       >
       {isLogin ? (
-          <Stack.Screen name="HomeScreen" component={Home}/>
+          <Stack.Screen name="HomeScreen" component={HomeScreenNav}/>
           ): (
             <>
             <Stack.Screen name="AuthStack" component={AuthStackNav}/>

@@ -12,10 +12,10 @@ import {
   TextInput
 } from 'react-native';
 
-const Password = ({placeholder, value, style}) => {
+const Textinput = ({placeholder, value, style}) => {
     return(
         <View style={style}>
-            <TextInput style={styles.input} placeholder="Password" secureTextEntry value={value}/>
+            <TextInput style={styles.input} placeholder={placeholder} value={value}/>
         </View>
     )
 }
@@ -34,4 +34,4 @@ const styles = StyleSheet.create({
     }
 })
 
-export default Password
+export default Textinput

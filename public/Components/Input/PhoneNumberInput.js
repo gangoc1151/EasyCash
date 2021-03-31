@@ -9,15 +9,19 @@ import {
   View,
   Button,
   TouchableOpacity,
-  TextInput
+  TextInput,
+  Keyboard
+ 
 } from 'react-native';
-
-const PhoneNumberInput = () => {
+import PickerModal from '../Input/PickerModal'
+//https://www.npmjs.com/package/react-native-picker-select#styling
+const PhoneNumberInput = ({style}) => {
     return(
-        <View style={styles.container}>
-            <Text style={{color:"#0F71E9", marginRight: 5, padding: 10}}>+84</Text>
+        <View style={[styles.container, style]}>
+            {/* <Text style={{color:"#0F71E9", marginRight: 5, padding: 10}}>+84</Text> */}
+            <PickerModal style={{color:"#0F71E9", padding: 15, }}/>
             <View style={styles.verticleLine}></View>
-            <TextInput style={styles.input} placeholder="Type in" autoFocus keyboardType="numeric"/>
+            <TextInput style={styles.input} placeholder="Phone number" autoFocus keyboardType="numeric"/>
         </View>
     )
 }
@@ -25,11 +29,11 @@ const PhoneNumberInput = () => {
 const styles = StyleSheet.create({
     container: {
         flexDirection:'row',
-        width: 300,
-        height: 40,
+        width: 310,
+        height: 50,
         borderWidth: 1,
         borderColor: "#D1D1D1",
-        borderRadius: 20
+        borderRadius: 25
     },
     verticleLine: {
         height: '90%',
@@ -38,7 +42,8 @@ const styles = StyleSheet.create({
         backgroundColor: '#D1D1D1',
     },
     input: {
-        paddingLeft: 10
+        paddingLeft: 10,
+        width: 240
     }
 })
 

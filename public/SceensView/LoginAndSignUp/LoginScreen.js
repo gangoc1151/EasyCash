@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
   SafeAreaView,
   ScrollView,
@@ -9,34 +9,38 @@ import {
   View,
   Button,
   TouchableOpacity,
+  TouchableWithoutFeedback,
+ 
 } from 'react-native';
 import PhoneNumberInput from '../../Components/Input/PhoneNumberInput'
 import Password from '../../Components/Input/Password';
 import ButtonClick from '../../Components/Button'
-import ButtonFb from '../../Components/ButtonFb'
+import ButtonFb from '../../Components/ButtonFb';
+import PickerModal from '../../Components/Input/PickerModal';
 
 const LoginScreen = (props) => {
+    const [displayModal, setdisplayModal] = useState('none')
     return (
         <View style={styles.container}>
-            <View style={{flex:1}}>
+            <ScrollView style={{flex:1}} keyboardShouldPersistTaps="handled">
                 <View style={{alignItems: 'center'}}>
-                        <PhoneNumberInput />
-                        <Password />
-                        <ButtonClick text='Register' style={styles.login} />
+                        <PhoneNumberInput style={styles.phonenumber} onPress={()=> setdisplayModal("flex")} />
+                        <Password style={{marginTop: 20}}/>
+                        <ButtonClick text='Login' style={styles.login} />
                         <ButtonFb text="Login with Facebook Account" style={styles.loginFb}/>
                     </View>   
                 
                 <View style={styles.row}>
-                    <TouchableOpacity>
-                        <Text>Forgot password?</Text>
+                    <TouchableOpacity >
+                        <Text style={styles.rowli}>Forgot password?</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity>
-                        <Text>Register</Text>
+                    <TouchableOpacity style={styles.rowli} onPress={()=> props.navigation.navigate("SignUp")}>
+                        <Text style={styles.rowli}>Register</Text>
                     </TouchableOpacity>
                 </View>
-            </View>
-            
-        <View style={styles.footer}>
+               
+            </ScrollView>
+            <View style={styles.footer}>
                 <Text>Your are in </Text>
                 <Text style={{color:'#3684E4'}}>Viet Nam</Text>
             </View>
@@ -47,12 +51,13 @@ const LoginScreen = (props) => {
 const styles = StyleSheet.create({
    container: {
        flex: 1,
-     
+       
    },
    login:{
     backgroundColor: '#FE4E4E',
-    width: 300,
-    height: 39,
+    width: 310,
+    height: 45,
+    marginTop: 20,
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 25
@@ -60,22 +65,35 @@ const styles = StyleSheet.create({
    loginFb:{
     flexDirection:'row',
     backgroundColor: '#274F91',
-    width: 300,
-    height: 39,
+    width: 310,
+    height: 45,
+    marginTop: 20,
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 25
    },
    row: {
        flexDirection: 'row',
-       justifyContent: 'space-around'
+       justifyContent: 'space-around',
+       marginTop: 20,
    },
+   rowli:{
+        color:'#3569D5',
+        fontSize: 15
+   }
+   ,
    footer:{
     flexDirection: 'row',
     backgroundColor: '#DEDEDE',
     height: 50,
     alignItems: 'center',
     justifyContent: 'center'
+    },
+    phonenumber:{
+        marginTop: 70
+    },
+    picker:{
+        display: 'none'
     }
 })
 

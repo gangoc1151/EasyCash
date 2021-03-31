@@ -11,7 +11,7 @@ import {
   Image,
   TouchableOpacity
 } from 'react-native';
-import AppIntroSlider from 'react-native-app-intro-slider';
+
 import Slider from '../../Components/Slider'
 import ButtonClick from '../../Components/Button'
 const slides = [
@@ -42,17 +42,20 @@ const HomeSceen = ({navigation}) => {
     
     return (
         <View style={styles.container}>
-            <View style={styles.body}>
+          <ScrollView contentContainerStyle={styles.body} showsVerticalScrollIndicator={false} >
+            <View >
                 <Slider data = {slides} style={styles.Slider}/>
                 <View style={styles.modalBox}>
                     <ButtonClick text='Login' style={styles.LoginButton} onPress={() => navigation.navigate('Login')}/>
-                    <ButtonClick text='Register' style={styles.SignUpButton}/>
+                    <ButtonClick text='Register' style={styles.SignUpButton} onPress={() => navigation.navigate('SignUp')}/>
                 </View>
             </View>
+          </ScrollView>
             <View style={styles.footer}>
                 <Text>Your are in </Text>
                 <Text style={{color:'#3684E4'}}>Viet Nam</Text>
             </View>
+         
         </View>
     )
 }
@@ -60,7 +63,7 @@ const styles = StyleSheet.create({
   container: {
     flex:1,
     alignContent: 'center',
-    justifyContent: 'center'
+  
   },
   body:{
       flex: 1,
