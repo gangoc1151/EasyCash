@@ -29,12 +29,11 @@ const BrandNameBox = ({data, style}) => {
                     return (
                    <DataTable> 
                         <DataTable.Row> 
-                            <DataTable.Cell>
                                 <View style={styles.image} >
                                     <Image  source={item.image}/>
                                     <Text style={styles.text}>{item.title}</Text>
                                 </View>
-                            </DataTable.Cell>
+                          
                         </DataTable.Row>
                     </DataTable>
                    
@@ -60,7 +59,7 @@ const styles = StyleSheet.create({
         color: '#FE4E4E',
         letterSpacing: 0,
         fontSize: 14,
-        fontWeight: '500'
+        fontWeight: '500',
     }
 })
 

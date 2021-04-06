@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import {
   SafeAreaView,
   ScrollView,
@@ -9,7 +9,7 @@ import {
   View,
   Button,
   Image,
-  useEffect
+
 } from 'react-native';
 import PersoneCard from '../../Components/HomeComponents/PersonCard';
 import Banner from '../../Components/HomeComponents/Banner'
@@ -25,7 +25,25 @@ import FeatureItem from '../../Components/HomeComponents/FeatureItem';
 import HotDealItem from '../../Components/HomeComponents/HotDealItem';
 import BrandNameBox from '../../Components/HomeComponents/BrandNameBox'
 
+
+const formatData = (data) => {
+    const brandname = [[],[]]
+    var i = 0
+    while(i < 6){
+        if (brandname[0].length < 3){
+            brandname[0].push(data[i])
+        }
+        else {
+            brandname[1].push(data[i])
+        }
+        i++
+    }
+ 
+    return brandname
+}
+
 const Online = ({navigation}) => {
+
    
     return (
         <ScrollView keyboardShouldPersistTaps="handled" 
@@ -38,18 +56,10 @@ const Online = ({navigation}) => {
             <View style={{width: '100%', alignItems: 'center'}}>
                 <PersoneCard />
             </View>
-            {data.BrandName[0].map((data) => {
-                 return (
-                    <View key={data.key}>
-                        <Text>{data.title}</Text>
-                    </View>
-                    )
-            })}
-           
             <Banner data={data.banner} style={{marginTop: 10}}/>
             <Title iconname='star' title='Top Thương Hiệu'/>
-            <BrandName data={data.BrandName}/>
-            {/* <BrandNameBox data={data.BrandName[0]}/> */}
+            <BrandName data={formatData(data.BrandName)}/>
+            
             <Image source={data.banner[0].image} style={styles.banner}/>
             <View style={styles.title}>
                 <Icon name='star' size={22} color='#FE4E4E'/>

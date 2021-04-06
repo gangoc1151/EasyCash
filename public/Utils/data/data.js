@@ -20,7 +20,6 @@ const data = {
         }
       ],
     BrandName: [
-      [
         {
           key: 'one',
           title: 'Up to 15%',
@@ -39,8 +38,7 @@ const data = {
           image: require('../../../src/Image/BrandName/1547021914156.png'),
           backgroundColor: '#22bcb5',
         }
-      ],
-     [
+     ,
       {
         key: 'four',
         title: 'Up to 30%',
@@ -58,8 +56,14 @@ const data = {
         title: 'Up to 40%',
         image: require('../../../src/Image/BrandName/1604658242391.png'),
         backgroundColor: '#22bcb5',
+      },
+      {
+        key: 'six',
+        title: 'Up to 40%',
+        image: require('../../../src/Image/BrandName/1604658242391.png'),
+        backgroundColor: '#22bcb5',
       }
-     ]
+     
     ],
     HotDeals:[
         {

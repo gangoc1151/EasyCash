@@ -21,9 +21,6 @@ const BrandName = ({data}) => {
                     horizontal
                     pagingEnabled
                     scrollEnabled
-                    snapToAlignment= 'center'
-                    scrollEventThrottle ={16}
-                    decelerationRate = {'fast'}
                     showsHorizontalScrollIndicator = {false}
                     renderItem={({item}) => {
                    
@@ -46,6 +43,7 @@ const styles = StyleSheet.create({
         shadowOffset: {width: 1, height: 1},
         shadowColor: '#D3D3D3',
         shadowOpacity: 0.7,
+        
        
     }
 })
