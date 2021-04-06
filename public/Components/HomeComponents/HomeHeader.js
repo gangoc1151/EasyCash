@@ -20,7 +20,7 @@ const HomeHeader = ({text, onPress}) => {
             <Text style={styles.headerText}>CASHBACK</Text>
             <View style={styles.search}>
                 <TextInput placeholder="Search" style={{width: '87%'}}/>
-                <Icon name='search' size={20} color='#000'/>
+                <Icon name='search' size={20} color='#000' style={{alignSelf: 'center'}}/>
             </View>
            
             <View style={styles.header}>
@@ -67,9 +67,10 @@ const styles = StyleSheet.create({
         borderRadius: 20,
         width: '60%',
         height: '85%',
-        padding: 10,
+        paddingHorizontal: 10,
         flexDirection: 'row',
         justifyContent: 'space-between'
+       
     }
    
 })

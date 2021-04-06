@@ -60,7 +60,73 @@ const data = {
         backgroundColor: '#22bcb5',
       }
      ]
-     
+    ],
+    HotDeals:[
+        {
+          key: '1',
+          image: require('../../../src/Image/hotdeal/Image1.png')
+        },
+        {
+          key: '2',
+          image: require('../../../src/Image/hotdeal/Image2.png')
+        },
+        {
+          key: '3',
+          image: require('../../../src/Image/hotdeal/Image3.png')
+        }
+      ,
+        {
+          key: '4',
+          image: require('../../../src/Image/hotdeal/Image4.png')
+        },
+        {
+          key: '5',
+          image: require('../../../src/Image/hotdeal/Image5.png')
+        },
+        {
+          key: '6',
+          image: require('../../../src/Image/hotdeal/Image6.png')
+        }
+      ,
+        {
+          key: '7',
+          image: require('../../../src/Image/hotdeal/Image7.png')
+        },
+        {
+          key: '8',
+          image: require('../../../src/Image/hotdeal/Image8.png')
+        },
+        {
+          key: '9',
+          image: require('../../../src/Image/hotdeal/Image9.png')
+        }
+    ],
+    FeatureBrands: [
+      {
+        key: '1',
+        image: require('../../../src/Image/Feature/Image1.png'),
+        title: 'Bộ sản phẩm làm đẹp Laneige',
+        cashback: 'Up to 3%'
+      },
+      {
+        key: '2',
+        image: require('../../../src/Image/Feature/Image1.png'),
+        title: 'Bộ sản phẩm làm đẹp Laneige',
+        cashback: 'Up to 3%'
+      },
+      {
+        key: '3',
+        image: require('../../../src/Image/Feature/Image1.png'),
+        title: 'Bộ sản phẩm làm đẹp Laneige',
+        cashback: 'Up to 3%'
+      }
+    ,
+      {
+        key: '4',
+        image: require('../../../src/Image/Feature/Image1.png'),
+        title: 'Bộ sản phẩm làm đẹp Laneige',
+        cashback: 'Up to 3%'
+      },
     ]
 }
 

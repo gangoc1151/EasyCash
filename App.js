@@ -23,6 +23,7 @@ import {AuthStackNav} from './public/SceensView/LoginAndSignUp/AuthStackNav';
 import HomeScreenNav from './public/SceensView/HomeScreens/HomeScreenNav'
 import HomeSceen from './public/SceensView/LoginAndSignUp/HomeSceen';
 import LoginScreen from './public/SceensView/LoginAndSignUp/LoginScreen'
+import Invitation from './public/SceensView/AccountScreens/Invitation';
 const Stack = createStackNavigator();
 const BottomTab = createBottomTabNavigator();
 
@@ -58,7 +59,10 @@ return (
       }}
       >
       {isLogin ? (
+        <>   
           <Stack.Screen name="HomeScreen" component={HomeScreenNav}/>
+          </>
+       
           ): (
             <>
             <Stack.Screen name="AuthStack" component={AuthStackNav}/>

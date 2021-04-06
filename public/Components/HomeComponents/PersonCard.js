@@ -35,14 +35,19 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff',
         marginTop: 20,
         width: 340,
+        height: 130,
         shadowOffset: {width: 1, height: 1},
         shadowColor: '#D3D3D3',
-        shadowOpacity: 0.7,
+        shadowOpacity: 1,
+        elevation: 5,
         marginHorizontal: 4,
         marginVertical: 6,
         padding: 10,
-        borderRadius: 10,
+        borderRadius: 4,
         justifyContent: 'center',
+        borderWidth: 1,
+        borderColor: '#F0F0F0'
+   
     },
     infor: {
         flexDirection:'row',
@@ -55,7 +60,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         padding: 5,
         marginTop: 15,
-        borderRadius: 15
+        borderRadius: 15,
     }
 })
 
