@@ -19,13 +19,13 @@ const Account = ({navigation}) => {
                 <View style={{ width: "100%", backgroundColor: '#fff', padding: 7, marginTop: 9}}>
                     <Option Iconname="ios-people" name='Rủ thêm bạn, nhận thêm hoàn tiền' IconColor="#2A9CFD" onPress={()=> navigation.navigate('Invitation')}/>
                 </View>
-                <View style={{ width: "100%", backgroundColor: '#fff', padding: 7, marginTop: 9}}>
+                <View style={{ width: "100%", backgroundColor: '#fff', padding: 5, marginTop: 9}}>
                     <Option Iconname="star" name='Đánh giá chúng tôi trên Appstore' IconColor="#F7CE47"/>
                 </View>
                 <View style={{ width: "100%", backgroundColor: '#fff', padding: 7, marginTop: 9}}>
                     <Text style={{fontSize: 16, color:'#414858', fontWeight: 'bold'}}>Cài đặt tài khoản</Text>
-                    <Option Iconname="person" name='Thông tin tài khoản' IconColor="#414858"/>
-                    <Option Iconname="md-lock-closed" name='Cập nhật mật khẩu' IconColor="#414858"/>
+                    <Option Iconname="person" name='Thông tin tài khoản' IconColor="#414858" onPress={() => navigation.navigate('PersonDetail')}/>
+                    <Option Iconname="md-lock-closed" name='Cập nhật mật khẩu' IconColor="#414858" onPress={() => navigation.navigate('ChangePassword')}/>
                     <Option Iconname="md-notifications" name='Cài đặt thông báo' IconColor="#414858"/>
                     <Option Iconname="md-language" name='Ngôn ngữ (Language)' IconColor="#414858"/>
                 </View>

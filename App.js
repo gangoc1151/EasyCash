@@ -8,6 +8,7 @@ import {
   Text,
   useColorScheme,
   View,
+  TouchableOpacity
 } from 'react-native';
 import SplashScreen from 'react-native-splash-screen'
 import Account from './public/SceensView/HomeScreens/Account';
@@ -24,6 +25,9 @@ import HomeScreenNav from './public/SceensView/HomeScreens/HomeScreenNav'
 import HomeSceen from './public/SceensView/LoginAndSignUp/HomeSceen';
 import LoginScreen from './public/SceensView/LoginAndSignUp/LoginScreen'
 import Invitation from './public/SceensView/AccountScreens/Invitation';
+import ChangePassword from './public/SceensView/AccountScreens/ChangePassword';
+import AccountHeader from './public/Components/AccountComponents/AccountHeader';
+import Icon from 'react-native-vector-icons/Ionicons';
 const Stack = createStackNavigator();
 const BottomTab = createBottomTabNavigator();
 
@@ -39,14 +43,23 @@ const App = () => {
   }, [hideSplash]);
 
   const isLogin =true;
-  const Home = () => {
+  const Home = ({navigation}) => {
     return (
-      <BottomTab.Navigator>
-            <BottomTab.Screen name="Online" component={Online}/>
-            <BottomTab.Screen name="AllStore" component={AllStore}/>
-            <BottomTab.Screen name="CashBack" component={CashBack}/>
-            <BottomTab.Screen name="Account" component={Account} />
-      </BottomTab.Navigator>
+      <Stack.Navigator  screenOptions={{
+        headerShown: false
+      }}>
+            <Stack.Screen name="HomeScreen" component={HomeScreenNav}/>
+            <Stack.Screen name="ChangePassword" component={ChangePassword}  options={{
+              headerShown: true,
+                headerTitle: () => <AccountHeader text='Change Password'/>,
+                    headerStyle:{
+                        backgroundColor: '#FE4E4E',
+                    },
+                   headerLeft: () =><TouchableOpacity onPress={() => navigation.pop()}><Icon name='md-chevron-back' size={30} color= "#fff" /></TouchableOpacity>,
+                  headerRight: () => <View><Text>  </Text></View>
+                }}/>
+            
+      </Stack.Navigator>
     )
     
   }
@@ -60,14 +73,11 @@ return (
       >
       {isLogin ? (
         <>   
-          <Stack.Screen name="HomeScreen" component={HomeScreenNav}/>
-          </>
-       
+          <Stack.Screen name="HomeScreen" component={Home}/>
+          </>  
           ): (
             <>
             <Stack.Screen name="AuthStack" component={AuthStackNav}/>
-            {/* <Stack.Screen name="Home" component={HomeSceen}/>
-            <Stack.Screen name="Login" component={LoginScreen} /> */}
             </>
           )
 

@@ -23,7 +23,7 @@ const PersoneCard = () => {
                 <Text style={{color: '#FE4E4E', fontSize: 25}}>2000$</Text>
             </View>
             <TouchableOpacity style={styles.recommendation}>
-                <Text style={{color: "#3F68C0", marginVertical: 5}}>Bắt đầu với những gợi ý tốt nhất từ chúng tôi!</Text>
+                <Text style={{color: "#3F68C0", marginVertical: 5, fontSize: 11}}>Bắt đầu với những gợi ý tốt nhất từ chúng tôi!</Text>
             </TouchableOpacity>
                 
         </View>

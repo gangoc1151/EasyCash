@@ -15,7 +15,7 @@ import {
 const Password = ({placeholder, value, style}) => {
     return(
         <View style={style}>
-            <TextInput style={styles.input} placeholder="Password" secureTextEntry value={value}/>
+            <TextInput style={styles.input} placeholder="Password" secureTextEntry value={value} placeholder={placeholder}/>
         </View>
     )
 }

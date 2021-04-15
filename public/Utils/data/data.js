@@ -23,18 +23,21 @@ const data = {
         {
           key: 'one',
           title: 'Up to 15%',
+          status: '6 deals',
           image: require('../../../src/Image/BrandName/1473826678805.png'),
           backgroundColor: '#59b2ab',
         },
         {
           key: 'two',
           title: 'Up to 20%',
+          status: '6 deals',
           image: require('../../../src/Image/BrandName/1547021789078.png'),
           backgroundColor: '#febe29',
         },
         {
           key: 'three',
           title: 'Up to 25%',
+          status: '6 deals',
           image: require('../../../src/Image/BrandName/1547021914156.png'),
           backgroundColor: '#22bcb5',
         }
@@ -42,24 +45,28 @@ const data = {
       {
         key: 'four',
         title: 'Up to 30%',
+        status: '6 deals',
         image: require('../../../src/Image/BrandName/1562901873056.png'),
         backgroundColor: '#59b2ab',
       },
       {
         key: 'five',
         title: 'Up to 35%',
+        status: '6 deals',
         image: require('../../../src/Image/BrandName/1565160317506.png'),
         backgroundColor: '#febe29',
       },
       {
         key: 'six',
         title: 'Up to 40%',
+        status: '6 deals',
         image: require('../../../src/Image/BrandName/1604658242391.png'),
         backgroundColor: '#22bcb5',
       },
       {
         key: 'six',
         title: 'Up to 40%',
+        status: '6 deals',
         image: require('../../../src/Image/BrandName/1604658242391.png'),
         backgroundColor: '#22bcb5',
       }

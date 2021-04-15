@@ -49,16 +49,16 @@ const Category = () =>{
     return (
         <View style={styles.container}>
             <View style={{flexDirection: 'row', justifyContent: 'space-around', marginVertical: 9}}>
-                <CategoryItem text='Điện Tử & Gia Dụng' icon='easel-outline' color='#4A6CD1'/>
-                <CategoryItem text='Thoi Trang' icon='md-shirt' color='#EA5C56'/>
-                <CategoryItem text='Suc Khoe Lam Dep' icon='md-rose' color='#F789A2' />
-                <CategoryItem text='Tieu Dung Thuc Pham' icon='basket' color='#F6AC3C'/>
+                <CategoryItem text='Tech' icon='easel-outline' color='#4A6CD1'/>
+                <CategoryItem text='Fashion' icon='md-shirt' color='#EA5C56'/>
+                <CategoryItem text='Health & Beauty' icon='md-rose' color='#F789A2' />
+                <CategoryItem text='Food & Alcohol' icon='basket' color='#F6AC3C'/>
             </View>
             <View style={{flexDirection: 'row', justifyContent: 'space-around', marginVertical: 9}}>
-                <CategoryItem text='Me & Be' icon='ios-heart' color='#67C591'/>
-                <CategoryItem text='Nha cua & Doi song' icon='ios-business' color='#F6AC3C'/>
-                <CategoryItem text='Du Lich' icon='airplane-sharp' color='#4A6CD1'/>
-                <CategoryItem text='Uu Dai Hot' icon='ios-receipt' color='#EA5C56'/>
+                <CategoryItem text='Kids & Babies' icon='ios-heart' color='#67C591'/>
+                <CategoryItem text='Home & Other' icon='ios-business' color='#F6AC3C'/>
+                <CategoryItem text='Travel' icon='airplane-sharp' color='#4A6CD1'/>
+                <CategoryItem text='Hot' icon='ios-receipt' color='#EA5C56'/>
             </View>
              
 

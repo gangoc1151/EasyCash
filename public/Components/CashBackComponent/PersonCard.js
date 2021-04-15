@@ -75,13 +75,14 @@ const styles = StyleSheet.create({
     container: {
        backgroundColor: '#fff',
         marginTop: 100,
-        width: 330,
-        height: 115,
+        width: 345,
+        height: 120,
         shadowOffset: {width: 1, height: 1},
         shadowColor: '#D3D3D3',
         shadowOpacity: 1,
         elevation: 5,
         borderRadius: 10,
+        
        
     
    

@@ -21,6 +21,8 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import PersonCard from '../../Components/CashBackComponent/PersonCard'
 import Invitation from '../AccountScreens/Invitation'
 import AccountHeader from '../../Components/AccountComponents/AccountHeader'
+import PersonDetail from '../AccountScreens/PersonDetail';
+import ChangePassword from '../AccountScreens/ChangePassword'
 const BottomTab = createBottomTabNavigator();
 const Stack = createStackNavigator();
 const online = () => {
@@ -69,15 +71,28 @@ const account = ({navigation}) => {
         <Stack.Screen name="Account" component={Account}/>
         <Stack.Screen name="Invitation" component={Invitation} 
             options={{
-                headerTitle: () => <AccountHeader />,
+                headerTitle: () => <AccountHeader text='Refer a friend'/>,
                     headerStyle:{
                         backgroundColor: '#FE4E4E',
                     },
                    headerLeft: () =><TouchableOpacity onPress={() => navigation.pop()}><Icon name='md-chevron-back' size={30} color= "#fff" /></TouchableOpacity>,
                    headerRight: () => <View><Text>  </Text></View>
-                }}
-                
+                }}     
         />
+        <Stack.Screen name='PersonDetail' component={PersonDetail}
+             options={{
+                headerTitle: () => <AccountHeader text='Account Information'/>,
+                    headerStyle:{
+                        backgroundColor: '#FE4E4E',
+                    },
+                   headerLeft: () =><TouchableOpacity onPress={() => navigation.pop()}><Icon name='md-chevron-back' size={30} color= "#fff" /></TouchableOpacity>,
+                   headerRight: () => <TouchableOpacity
+                   style={{justifyContent: 'center', alignItems:'center', marginRight: 10}}
+                   ><Text style={{fontSize: 18, color: '#fff', alignSelf: 'center'}}>Save</Text></TouchableOpacity>
+                }}
+        />
+       
+        
     </Stack.Navigator>
     )
     
@@ -99,7 +114,7 @@ const HomeScreenNav = () => {
                     borderTopColor: '#D3D3D3',
                     borderTopWidth: 0.5,
                 },
-                labelPosition: 'below-icon'
+                labelPosition: 'below-icon',
             }}
             
         >
