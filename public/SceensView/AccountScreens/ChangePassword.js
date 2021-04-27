@@ -18,14 +18,14 @@ import Password from '../../Components/Input/Password';
 import ButtonClick from '../../Components/Button';
 const ChangePassword = () => {
     return (
-        <View style={{alignItems: 'center'}}>
+        <ScrollView contentContainerStyle={{alignItems: 'center'}} keyboardShouldPersistTaps="handled">
            
             <Password placeholder='Your password' style={styles.input}/>
             <Password placeholder='New password' style={styles.input}/>
             <Password placeholder='Repeat password' style={styles.input}/>
             <ButtonClick text='Update' style={styles.button}/>
             
-        </View>
+        </ScrollView>
     )
 }
 

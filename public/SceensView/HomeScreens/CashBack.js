@@ -12,16 +12,16 @@ import {
 import ButtonClick from '../../Components/Button'
 import PersonCard from '../../Components/CashBackComponent/PersonCard'
 import Option from '../../Components/Option'
-const CashBack = () => {
+const CashBack = ({navigation}) => {
     return (
         <ScrollView contentContainerStyle={{alignItems: 'center'}}>
             
-            <ButtonClick text='Withdraw' style={styles.Withdraw}/>
+            <ButtonClick text='Withdraw' style={styles.Withdraw} onPress={() => navigation.navigate('Withdrawal')}/>
             <Text style={styles.text}>Để rút tiền, số dư hiện tại cần có tối thiểu là 50.000 đ và ít nhất một tài khoản ngân hàng.</Text>
             <View style={styles.panel}>
                 <Text style={{fontSize: 16, color:'#414858', fontWeight: 'bold'}}>Thông tin</Text>
-                <Option Iconname="card" name='Tài khoản ngân hàng' IconColor="#414858"/>
-                <Option Iconname="list-outline" name='Lịch sử giao dịch' IconColor="#414858"/>
+                <Option Iconname="card" name='Tài khoản ngân hàng' IconColor="#414858" onPress={() => navigation.navigate('BankAccount')}/>
+                <Option Iconname="list-outline" name='Lịch sử giao dịch' IconColor="#414858" onPress={() => navigation.navigate('History') }/>
                 <Option Iconname="md-warning" name='Báo lỗi hoàn tiền' IconColor="#414858"/>
             </View>
         </ScrollView>

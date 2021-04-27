@@ -25,7 +25,7 @@ const LoginScreen = (props) => {
             <ScrollView style={{flex:1}} keyboardShouldPersistTaps="handled">
                 <View style={{alignItems: 'center'}}>
                         <PhoneNumberInput style={styles.phonenumber} onPress={()=> setdisplayModal("flex")} />
-                        <Password style={{marginTop: 20}}/>
+                        <Password style={{marginTop: 20}} placeholder='Password'/>
                         <ButtonClick text='Login' style={styles.login} />
                         <ButtonFb text="Login with Facebook Account" style={styles.loginFb}/>
                     </View>   
@@ -51,7 +51,7 @@ const LoginScreen = (props) => {
 const styles = StyleSheet.create({
    container: {
        flex: 1,
-       
+    
    },
    login:{
     backgroundColor: '#FE4E4E',

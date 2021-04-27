@@ -138,7 +138,38 @@ const data = {
         title: 'Bộ sản phẩm làm đẹp Laneige',
         cashback: 'Up to 3%'
       },
-    ]
+    ],
+    Bankname: [
+      {
+        key: '1',
+        image: require('../../../src/Image/banks/1.png'),
+        title: 'Bộ sản phẩm làm đẹp Laneige',
+       
+      },
+      {
+        key: '2',
+        image: require('../../../src/Image/banks/2.png'),
+        title: 'Bộ sản phẩm làm đẹp Laneige',
+     
+      },
+      {
+        key: '3',
+        image: require('../../../src/Image/banks/3.png'),
+        title: 'Bộ sản phẩm làm đẹp Laneige',
+        
+      }
+    ,
+      {
+        key: '4',
+        image: require('../../../src/Image/banks/4.png'),
+        title: 'Bộ sản phẩm làm đẹp Laneige',
+      },
+    {
+        key: '5',
+        image: require('../../../src/Image/banks/5.png'),
+        title: 'Bộ sản phẩm làm đẹp Laneige',
+    },
+    ] 
 }
 
 export default data;

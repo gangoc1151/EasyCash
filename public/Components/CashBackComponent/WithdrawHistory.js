@@ -1,0 +1,28 @@
+import React from 'react';
+import {
+  SafeAreaView,
+  ScrollView,
+  StatusBar,
+  StyleSheet,
+  Text,
+  useColorScheme,
+  View,
+  Button
+} from 'react-native';
+import Filter from './Filter'
+const WithdrawHistory = () => {
+    return (
+        <View style={{flex: 1, backgroundColor: '#fff',}}>
+        <View style={{marginHorizontal: 10}}>
+          <Filter />
+        </View>
+        
+    </View>
+    )
+}
+
+const styles = StyleSheet.create({
+
+})
+
+export default WithdrawHistory

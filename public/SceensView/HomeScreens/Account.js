@@ -26,12 +26,12 @@ const Account = ({navigation}) => {
                     <Text style={{fontSize: 16, color:'#414858', fontWeight: 'bold'}}>Cài đặt tài khoản</Text>
                     <Option Iconname="person" name='Thông tin tài khoản' IconColor="#414858" onPress={() => navigation.navigate('PersonDetail')}/>
                     <Option Iconname="md-lock-closed" name='Cập nhật mật khẩu' IconColor="#414858" onPress={() => navigation.navigate('ChangePassword')}/>
-                    <Option Iconname="md-notifications" name='Cài đặt thông báo' IconColor="#414858"/>
-                    <Option Iconname="md-language" name='Ngôn ngữ (Language)' IconColor="#414858"/>
+                    <Option Iconname="md-notifications" name='Cài đặt thông báo' IconColor="#414858" onPress={() => navigation.navigate('Notification')}/>
+                    <Option Iconname="md-language" name='Ngôn ngữ (Language)' IconColor="#414858" onPress={() => navigation.navigate('Language')}/>
                 </View>
                 <View style={{ width: "100%", backgroundColor: '#fff', padding: 7, marginTop: 9}}>
-                    <Text style={{fontSize: 16, color:'#414858', fontWeight: 'bold'}}>Hỗ trợ</Text>
-                    <Option Iconname="card" name='Trung tâm hỗ trợ' IconColor="#414858"/>
+                    <Text style={{fontSize: 16, color:'#414858', fontWeight: 'bold'}} >Hỗ trợ</Text>
+                    <Option Iconname="card" name='Trung tâm hỗ trợ' IconColor="#414858" onPress={() => navigation.navigate('CenterHelp')}/>
                 </View>
             </View>
            
@@ -40,6 +40,7 @@ const Account = ({navigation}) => {
             </TouchableOpacity>
             <Text style={{alignSelf: 'center', marginTop: 10, fontSize: 12, color:'#969696'}}>Version 1.2.1.1 (20.02.2021)</Text>
             <Text style={{alignSelf: 'center', fontSize: 9, color: '#969696', marginBottom: 55}}>Được tạo nên với tâm huyết</Text>
+            <View style={{marginBottom: 100}}></View>
         </ScrollView>
     )
 }
